@@ -1,8 +1,5 @@
 package com.paranyak;
 
-/**
- * Created by matt on 10/3/16.
- */
 public class Flower {
 
     protected  FlowerSpec spec;
