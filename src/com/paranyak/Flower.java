@@ -1,57 +1,41 @@
 package com.paranyak;
 
+/**
+ * Created by matt on 10/3/16.
+ */
 public class Flower {
-    public double getSize() {
-        return size;
+
+    protected  FlowerSpec spec;
+
+    public Flower (FlowerSpec spec) {
+        this.spec = spec;
     }
 
-    public void setSize(double size) {
-        this.size = size;
+    public String getType() {
+        return spec.getType();
     }
 
     public double getPrice() {
-        return price;
+        return spec.getPrice();
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public double getLength() {
+        return spec.getLength();
     }
 
-    public String getColor() {
-        return color;
+    public FlowerColor getColor() {
+        return spec.getColor();
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public boolean isFresh() {
+        return spec.isFresh();
     }
-    public String toString(){
-        return name;
-    }
-
-    private double size = 0;
-
-    private double price =0;
-
-    private String color = "";
-
-    public double getFresh() {
-        return fresh;
+    public FlowerSpec getSpec(){
+        return spec;
     }
 
-    public void setFresh(double fresh) {
-        this.fresh = fresh;
+    public String toString() {
+        return "Type: " + getType() + ", Price:  " + String.valueOf(getPrice()) + ", " + getColor() + ", Fresh: " + String.valueOf(isFresh()) + ", Height: " + String.valueOf(getLength());
     }
-
-    private double fresh = 0;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    protected String name = "";
 
 }
