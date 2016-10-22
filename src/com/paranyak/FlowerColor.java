@@ -5,7 +5,7 @@ package com.paranyak;
  */
 
 public enum FlowerColor {
-    BLACK, RED, WHITE, PINK, GREEN;
+    BLACK, RED, WHITE, PINK, GREEN, NOCOLOR;
     public String toString(){
         String a = "";
         switch (this){
@@ -14,6 +14,7 @@ public enum FlowerColor {
             case RED: a = "Red color"; break;
             case WHITE: a = "White color"; break;
             case PINK: a = "Pink color"; break;
+
         }
         return a;
     }

@@ -4,11 +4,11 @@ package com.paranyak;
  * Created by cs.ucu.edu.ua on 10/18/2016.
  */
 public class FlowerSpec {
-    protected FlowerColor color;
-    protected double length;
-    protected boolean fresh;
-    protected double price;
-    protected String type;
+    protected FlowerColor color = FlowerColor.NOCOLOR;
+    protected double length = -1.0;
+    protected Boolean fresh = null;
+    protected double price= -1.0;
+    protected String type = "no name";
 
     public void setColor(FlowerColor color) {
         this.color = color;
@@ -33,22 +33,23 @@ public class FlowerSpec {
 
 
     public boolean matches(FlowerSpec otherSpec){
-        if(color != otherSpec.color) {
+
+        if((color != otherSpec.color) && (otherSpec.color != FlowerColor.NOCOLOR)) {
             return false;
         }
-        if((type != null)&& (!type.equals(otherSpec.type))){
+        if((type != otherSpec.type) && (otherSpec.type != "no name")){
             return false;
         }
-        if(length != otherSpec.length){
+        if((length != otherSpec.length) && (otherSpec.length != -1.0)){
             return false;
         }
-        if(price != otherSpec.price){
+        if((price != otherSpec.price) && (otherSpec.price != -1.0)){
             return false;
         }
-        if(fresh != otherSpec.fresh){
+        if((fresh != otherSpec.fresh) && (otherSpec.fresh != null)){
             return false;
         }
-            return true;
+        return  true;
     }
 
 
